@@ -169,91 +169,89 @@ def recieveMessage():
       
       if (message =='l'):
       
-      pwm.ChangeDutyCycle(7)
-      sense.set_pixels(padlock_locked)
-      sock.send(bytes(messageLocked, "UTF-8"))
-      i = 1
-      lock.acquire()
-      lock.release()
+        pwm.ChangeDutyCycle(7)
+        sense.set_pixels(padlock_locked)
+        sock.send(bytes(messageLocked, "UTF-8"))
+        i = 1
+        lock.acquire()
+        lock.release()
       
       
       if (message == 'o'):  
       
-      pwm.ChangeDutyCycle(12)        
-      sock.send(bytes(messageUnlocked, "UTF-8"))
-      sense.show_message(str(name), scroll_speed=0.04, text_colour=[0, 0, 255])
-      sense.set_pixels(padlock_unlocked)
-      i = 0
-      lock.acquire()
-      lock.release()
+        pwm.ChangeDutyCycle(12)        
+        sock.send(bytes(messageUnlocked, "UTF-8"))
+        sense.show_message(str(name), scroll_speed=0.04, text_colour=[0, 0, 255])
+        sense.set_pixels(padlock_unlocked)
+        i = 0
+        lock.acquire()
+        lock.release()
       
     if (display == star): 
       
       if (message =='l'):
       
-      pwm.ChangeDutyCycle(7)
-      sense.set_pixels(star_locked)
-      sock.send(bytes(messageLocked, "UTF-8"))
-      i = 1
-      lock.acquire()
-      lock.release()
+        pwm.ChangeDutyCycle(7)
+        sense.set_pixels(star_locked)
+        sock.send(bytes(messageLocked, "UTF-8"))
+        i = 1
+        lock.acquire()
+        lock.release()
       
       
       if (message == 'o'):  
       
-      pwm.ChangeDutyCycle(12)        
-      sock.send(bytes(messageUnlocked, "UTF-8"))
-      sense.show_message(str(name), scroll_speed=0.04, text_colour=[0, 0, 255])
-      sense.set_pixels(star_unlocked)
-      i = 0
-      lock.acquire()
-      lock.release()
+        pwm.ChangeDutyCycle(12)        
+        sock.send(bytes(messageUnlocked, "UTF-8"))
+        sense.show_message(str(name), scroll_speed=0.04, text_colour=[0, 0, 255])
+        sense.set_pixels(star_unlocked)
+        i = 0
+        lock.acquire()
+        lock.release()
       
     if (display == tree): 
       
       if (message =='l'):
       
-      pwm.ChangeDutyCycle(7)
-      sense.set_pixels(tree_locked)
-      sock.send(bytes(messageLocked, "UTF-8"))
-      i = 1
-      lock.acquire()
-      lock.release()
+        pwm.ChangeDutyCycle(7)
+        sense.set_pixels(tree_locked)
+        sock.send(bytes(messageLocked, "UTF-8"))
+        i = 1
+        lock.acquire()
+        lock.release()
       
       
       if (message == 'o'):  
       
-      pwm.ChangeDutyCycle(12)        
-      sock.send(bytes(messageUnlocked, "UTF-8"))
-      sense.show_message(str(name), scroll_speed=0.04, text_colour=[0, 0, 255])
-      sense.set_pixels(tree_unlocked)
-      i = 0
-      lock.acquire()
-      lock.release()
+        pwm.ChangeDutyCycle(12)        
+        sock.send(bytes(messageUnlocked, "UTF-8"))
+        sense.show_message(str(name), scroll_speed=0.04, text_colour=[0, 0, 255])
+        sense.set_pixels(tree_unlocked)
+        i = 0
+        lock.acquire()
+        lock.release()
       
     if (display == firework): 
       
       if (message =='l'):
       
-      pwm.ChangeDutyCycle(7)
-      sense.set_pixels(firework_locked)
-      sock.send(bytes(messageLocked, "UTF-8"))
-      i = 1
-      lock.acquire()
-      lock.release()
+        pwm.ChangeDutyCycle(7)
+        sense.set_pixels(firework_locked)
+        sock.send(bytes(messageLocked, "UTF-8"))
+        i = 1
+        lock.acquire()
+        lock.release()
       
       
       if (message == 'o'):  
       
-      pwm.ChangeDutyCycle(12)        
-      sock.send(bytes(messageUnlocked, "UTF-8"))
-      sense.show_message(str(name), scroll_speed=0.04, text_colour=[0, 0, 255])
-      sense.set_pixels(firework_unlocked)
-      i = 0
-      lock.acquire()
-      lock.release()
-          
-    
+        pwm.ChangeDutyCycle(12)        
+        sock.send(bytes(messageUnlocked, "UTF-8"))
+        sense.show_message(str(name), scroll_speed=0.04, text_colour=[0, 0, 255])
+        sense.set_pixels(firework_unlocked)
+        i = 0
+        lock.acquire()
+        lock.release()   
       
 
 thread1 = threading.Thread(target=recieveMessage)
