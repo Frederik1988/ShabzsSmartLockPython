@@ -4,7 +4,6 @@ from sense_hat import SenseHat
 import socket
 import threading
 from threading import Lock, Thread
-import shabzLockDisplay
 
 TCP_IP = "192.168.24.239"
 TCP_PORT = 9576
@@ -138,17 +137,14 @@ def set_display():
     for event in sense.stick.get_events():
         if event.action == "left":
           display = 1
-        
-    for event in sense.stick.get_events():
-        if event.action == "right":
+    
+        elif event.action == "right":
           display = 2
-          
-    for event in sense.stick.get_events():
-        if event.action == "up":
+    
+        elif event.action == "up":
           display = 3
           
-    for event in sense.stick.get_events():
-        if event.action == "down":
+        elif event.action == "down":
           display = 4
           
 
