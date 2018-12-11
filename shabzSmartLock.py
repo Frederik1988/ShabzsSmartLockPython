@@ -135,16 +135,16 @@ def set_display():
     lock_display.release()
     
     for event in sense.stick.get_events():
-        if event.action == "left":
+        if event.direction == "left":
           display = 1
     
-        elif event.action == "right":
+        elif event.direction == "right":
           display = 2
     
-        elif event.action == "up":
+        elif event.direction == "up":
           display = 3
           
-        elif event.action == "down":
+        elif event.direction == "down":
           display = 4
           
 
@@ -165,7 +165,7 @@ def joystick():
       if (i ==1):
       
         for event in sense.stick.get_events():
-          if event.action == "pressed":
+          if event.direction == "middle":
             pwm.ChangeDutyCycle(12)
             sock.send(bytes(messageJoystickUnlock, "UTF-8"))
             sense.show_message(str("HA EN DEJLIG DAG"), scroll_speed=0.04, text_colour=[0, 0, 255])
@@ -174,7 +174,7 @@ def joystick():
     
       if (i == 0):
         for event in sense.stick.get_events():
-          if event.action == "pressed":
+          if event.direction == "middle":
             pwm.ChangeDutyCycle(7)
             sock.send(bytes(messageJoystickLock, "UTF-8"))
             sense.set_pixels(padlock_locked)
@@ -185,7 +185,7 @@ def joystick():
       if (i ==1):
       
         for event in sense.stick.get_events():
-          if event.action == "pressed":
+          if event.direction == "middle":
             pwm.ChangeDutyCycle(12)
             sock.send(bytes(messageJoystickUnlock, "UTF-8"))
             sense.show_message(str("HA EN DEJLIG DAG"), scroll_speed=0.04, text_colour=[0, 0, 255])
@@ -194,7 +194,7 @@ def joystick():
     
       if (i == 0):
         for event in sense.stick.get_events():
-          if event.action == "pressed":
+          if event.direction == "middle":
             pwm.ChangeDutyCycle(7)
             sock.send(bytes(messageJoystickLock, "UTF-8"))
             sense.set_pixels(star_locked)
@@ -205,7 +205,7 @@ def joystick():
       if (i ==1):
       
         for event in sense.stick.get_events():
-          if event.action == "pressed":
+          if event.direction == "middle":
             pwm.ChangeDutyCycle(12)
             sock.send(bytes(messageJoystickUnlock, "UTF-8"))
             sense.show_message(str("HA EN DEJLIG DAG"), scroll_speed=0.04, text_colour=[0, 0, 255])
@@ -214,7 +214,7 @@ def joystick():
     
       if (i == 0):
         for event in sense.stick.get_events():
-          if event.action == "pressed":
+          if event.direction == "middle":
             pwm.ChangeDutyCycle(7)
             sock.send(bytes(messageJoystickLock, "UTF-8"))
             sense.set_pixels(tree_locked)
@@ -225,7 +225,7 @@ def joystick():
       if (i ==1):
       
         for event in sense.stick.get_events():
-          if event.action == "pressed":
+          if event.direction == "middle":
             pwm.ChangeDutyCycle(12)
             sock.send(bytes(messageJoystickUnlock, "UTF-8"))
             sense.show_message(str("HA EN DEJLIG DAG"), scroll_speed=0.04, text_colour=[0, 0, 255])
@@ -234,7 +234,7 @@ def joystick():
     
       if (i == 0):
         for event in sense.stick.get_events():
-          if event.action == "pressed":
+          if event.direction == "middle":
             pwm.ChangeDutyCycle(7)
             sock.send(bytes(messageJoystickLock, "UTF-8"))
             sense.set_pixels(firework_locked)
