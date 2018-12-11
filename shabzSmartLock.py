@@ -137,16 +137,19 @@ def set_display():
     for event in sense.stick.get_events():
         if event.direction == "left":
           display = 1
+          sense.set_pixels(padlock_locked)
     
         elif event.direction == "right":
           display = 2
+          sense.set_pixels(star_locked)
     
         elif event.direction == "up":
           display = 3
+          sense.set_pixels(tree_locked)
           
         elif event.direction == "down":
           display = 4
-          
+          sense.set_pixels(firework_locked)
 
 def joystick(): 
   
