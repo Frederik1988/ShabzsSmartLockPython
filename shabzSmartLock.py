@@ -64,7 +64,7 @@ def joystick():
   while True:
     
     lock.acquire()
-    lock.release(
+    lock.release()
     lock_display.acquire()
     lock_display.release()
     
