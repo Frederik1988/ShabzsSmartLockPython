@@ -46,34 +46,31 @@ def set_display():
     for event in sense.stick.get_events():
         if event.direction == "left":
           display = 1
-          if (i == 0):
-            sense.set_pixels(shabzLockDisplay.padlock_locked)
           if (i == 1):
+            sense.set_pixels(shabzLockDisplay.padlock_locked)
+          if (i == 0):
             sense.set_pixels(shabzLockDisplay.padlock_unlocked)
           
     
         elif event.direction == "right":
           display = 2
-          sense.set_pixels(shabzLockDisplay.star_locked)
-          if (i == 0):
-            sense.set_pixels(shabzLockDisplay.star_locked)
           if (i == 1):
+            sense.set_pixels(shabzLockDisplay.star_locked)
+          if (i == 0):
             sense.set_pixels(shabzLockDisplay.star_unlocked)
     
         elif event.direction == "up":
           display = 3
-          sense.set_pixels(shabzLockDisplay.tree_locked)
-          if (i == 0):
-            sense.set_pixels(shabzLockDisplay.tree_locked)
           if (i == 1):
+            sense.set_pixels(shabzLockDisplay.tree_locked)
+          if (i == 0):
             sense.set_pixels(shabzLockDisplay.tree_unlocked)
           
         elif event.direction == "down":
           display = 4
-          sense.set_pixels(shabzLockDisplay.firework_locked)
-          if (i == 0):
-            sense.set_pixels(shabzLockDisplay.firework_locked)
           if (i == 1):
+            sense.set_pixels(shabzLockDisplay.firework_locked)
+          if (i == 0):
             sense.set_pixels(shabzLockDisplay.firework_unlocked)
 
 def joystick(): 
