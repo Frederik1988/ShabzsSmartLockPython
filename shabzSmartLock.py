@@ -242,8 +242,6 @@ def joystick():
             sock.send(bytes(messageJoystickLock, "UTF-8"))
             sense.set_pixels(firework_locked)
             i = 1
-    
-
 
 def recieveMessage():
   
@@ -291,8 +289,7 @@ def recieveMessage():
         sock.send(bytes(messageLocked, "UTF-8"))
         i = 1
         lock.acquire()
-        lock.release()
-      
+        lock.release()      
       
       if (message == 'o'):  
       
@@ -313,8 +310,7 @@ def recieveMessage():
         sock.send(bytes(messageLocked, "UTF-8"))
         i = 1
         lock.acquire()
-        lock.release()
-      
+        lock.release()      
       
       if (message == 'o'):  
       
@@ -335,8 +331,7 @@ def recieveMessage():
         sock.send(bytes(messageLocked, "UTF-8"))
         i = 1
         lock.acquire()
-        lock.release()
-      
+        lock.release()      
       
       if (message == 'o'):  
       
@@ -346,10 +341,7 @@ def recieveMessage():
         sense.set_pixels(firework_unlocked)
         i = 0
         lock.acquire()
-        lock.release()
-          
-    
-      
+        lock.release()      
 
 thread1 = threading.Thread(target=recieveMessage)
 thread2 = threading.Thread(target=joystick)
