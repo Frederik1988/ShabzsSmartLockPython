@@ -30,23 +30,23 @@ padlock_unlocked = [
 
 tree_locked= [
   s,s,s,r,r,s,s,s,
-  s,s,s,s,s,s,s,s,
   s,s,r,r,r,r,s,s,
-  s,s,s,s,s,s,s,s,  
+  s,s,r,r,r,r,s,s, 
   s,r,r,r,r,r,r,s,
-  s,s,s,s,s,s,s,s,
+  s,r,r,r,r,r,r,s,
   r,r,r,r,r,r,r,r,
+  s,s,s,b,b,s,s,s,
   s,s,s,b,b,s,s,s
 ]
 
 tree_unlocked = [
   s,s,s,g,g,s,s,s,
-  s,s,s,s,s,s,s,s,
   s,s,g,g,g,g,s,s,
-  s,s,s,s,s,s,s,s,  
+  s,s,g,g,g,g,s,s,  
   s,g,g,g,g,g,g,s,
-  s,s,s,s,s,s,s,s,
+  s,g,g,g,g,g,g,s,
   g,g,g,g,g,g,g,g,
+  s,s,s,b,b,s,s,s,
   s,s,s,b,b,s,s,s
 ]
 
