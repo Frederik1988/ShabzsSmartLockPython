@@ -228,7 +228,7 @@ def joystick():
           if event.direction == "middle":
             pwm.ChangeDutyCycle(12)
             sock.send(bytes(messageJoystickUnlock, "UTF-8"))
-            sense.show_message(str("HA EN DEJLIG DAG"), scroll_speed=0.04, text_colour=[0, 0, 255])
+            sense.show_message(str("HAVE A NICE DAY"), scroll_speed=0.04, text_colour=[0, 0, 255])
             sense.set_pixels(firework_unlocked)
             i = 0
     
