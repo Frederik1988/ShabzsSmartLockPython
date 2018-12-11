@@ -25,10 +25,10 @@ lock = Lock()
 i = 1
 
 lock_display = Lock()
-display = padlock
+display = 1
 
 pwm.start(7)
-sense.set_pixels(locked)
+sense.set_pixels(padlock_locked)
 
 def set_display():
   
@@ -41,19 +41,19 @@ def set_display():
     
     for event in sense.stick.get_events():
         if event.action == "left":
-          display = padlock
+          display = 1
         
     for event in sense.stick.get_events():
         if event.action == "right":
-          display = star
+          display = 2
           
     for event in sense.stick.get_events():
         if event.action == "up":
-          display = tree
+          display = 3
           
     for event in sense.stick.get_events():
         if event.action == "down":
-          display = firework
+          display = 4
           
 
 def joystick(): 
@@ -68,7 +68,7 @@ def joystick():
     lock_display.acquire()
     lock_display.release()
     
-    if (display == padlock):
+    if (display == 1):
       
       if (i ==1):
       
@@ -88,7 +88,7 @@ def joystick():
             sense.set_pixels(padlock_locked)
             i = 1
             
-    if (display == star):
+    if (display == 2):
       
       if (i ==1):
       
@@ -108,7 +108,7 @@ def joystick():
             sense.set_pixels(star_locked)
             i = 1
     
-    if (display == tree):
+    if (display == 3):
       
       if (i ==1):
       
@@ -128,7 +128,7 @@ def joystick():
             sense.set_pixels(tree_locked)
             i = 1
             
-    if (display == firework):
+    if (display == 4):
       
       if (i ==1):
       
@@ -165,7 +165,7 @@ def recieveMessage():
     message =  fromServer [0 : 1 -len(fromServer)]
     name = fromServer [1 : len(fromServer)-2]
     
-    if (display == padlock): 
+    if (display == 1): 
       
       if (message =='l'):
       
@@ -187,7 +187,7 @@ def recieveMessage():
         lock.acquire()
         lock.release()
       
-    if (display == star): 
+    if (display == 2): 
       
       if (message =='l'):
       
@@ -209,7 +209,7 @@ def recieveMessage():
         lock.acquire()
         lock.release()
       
-    if (display == tree): 
+    if (display == 3): 
       
       if (message =='l'):
       
@@ -231,7 +231,7 @@ def recieveMessage():
         lock.acquire()
         lock.release()
       
-    if (display == firework): 
+    if (display == 4): 
       
       if (message =='l'):
       
@@ -251,7 +251,9 @@ def recieveMessage():
         sense.set_pixels(firework_unlocked)
         i = 0
         lock.acquire()
-        lock.release()   
+        lock.release()
+          
+    
       
 
 thread1 = threading.Thread(target=recieveMessage)
