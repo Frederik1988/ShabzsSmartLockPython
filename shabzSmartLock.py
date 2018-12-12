@@ -93,7 +93,7 @@ def joystick():
           if event.direction == "middle":
             pwm.ChangeDutyCycle(12)
             sock.send(bytes(messageJoystickUnlock, "UTF-8"))
-            sense.show_message(str("HAVE A NICE DAY"), scroll_speed=0.03, text_colour=[0, 0, 255])
+            sense.show_message(str("HAVE A NICE DAY"), scroll_speed=0.001, text_colour=[0, 0, 255])
             sense.set_pixels(shabzLockDisplay.padlock_unlocked)
             i = 0
     
@@ -113,7 +113,7 @@ def joystick():
           if event.direction == "middle":
             pwm.ChangeDutyCycle(12)
             sock.send(bytes(messageJoystickUnlock, "UTF-8"))
-            sense.show_message(str("HAVE A NICE DAY"), scroll_speed=0.03, text_colour=[0, 0, 255])
+            sense.show_message(str("HAVE A NICE DAY"), scroll_speed=0.001, text_colour=[0, 0, 255])
             sense.set_pixels(shabzLockDisplay.star_unlocked)
             i = 0
     
@@ -133,7 +133,7 @@ def joystick():
           if event.direction == "middle":
             pwm.ChangeDutyCycle(12)
             sock.send(bytes(messageJoystickUnlock, "UTF-8"))
-            sense.show_message(str("HAVE A NICE DAY"), scroll_speed=0.03, text_colour=[0, 0, 255])
+            sense.show_message(str("HAVE A NICE DAY"), scroll_speed=0.001, text_colour=[0, 0, 255])
             sense.set_pixels(shabzLockDisplay.tree_unlocked)
             i = 0
     
@@ -153,7 +153,7 @@ def joystick():
           if event.direction == "middle":
             pwm.ChangeDutyCycle(12)
             sock.send(bytes(messageJoystickUnlock, "UTF-8"))
-            sense.show_message(str("HAVE A NICE DAY"), scroll_speed=0.3, text_colour=[0, 0, 255])
+            sense.show_message(str("HAVE A NICE DAY"), scroll_speed=0.001, text_colour=[0, 0, 255])
             sense.set_pixels(shabzLockDisplay.firework_unlocked)
             i = 0
     
